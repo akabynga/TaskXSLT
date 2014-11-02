@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop>
+	<category name="Trucks">
+		<subcategory name="American">
+			<product>
+				<producer>Ford</producer>
+				<model>Maverick</model>
+				<dateOfIssue>12-12-2013</dateOfIssue>
+				<color>Black</color>
+				<notInStock>true</notInStock>
+			</product>
+			<product>
+				<producer>Ford</producer>
+				<model>Maverick</model>
+				<dateOfIssue>12-12-2013</dateOfIssue>
+				<color>Black</color>
+				<notInStock>true</notInStock>
+			</product>
+			<product>
+				<producer>Ford</producer>
+				<model>Maverick</model>
+				<dateOfIssue>12-12-2013</dateOfIssue>
+				<color>Black</color>
+				<notInStock>true</notInStock>
+			</product>
+		</subcategory>
+		<subcategory name="German">
+			<product>
+				<producer>Mercedes-Benz</producer>
+				<model>Actros</model>
+				<dateOfIssue>12-11-2013</dateOfIssue>
+				<color>Yellow</color>
+				<price>120000</price>
+			</product>
+		</subcategory>
+	</category>
+	<category name="Motor cars">
+		<subcategory name="French">
+			<product>
+				<producer>Renault</producer>
+				<model>Megane</model>
+				<dateOfIssue>10-10-2012</dateOfIssue>
+				<color>Black</color>
+				<notInStock>true</notInStock>
+			</product>
+		</subcategory>
+		<subcategory name="Russian">
+			<product>
+				<producer>Jigyli</producer>
+				<model>2101</model>
+				<dateOfIssue>10-10-2013</dateOfIssue>
+				<color>Red</color>
+				<price>3000</price>
+			</product>
+		</subcategory>
+	</category>
+</shop>

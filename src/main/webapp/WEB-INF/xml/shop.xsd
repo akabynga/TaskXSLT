@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ShopXSLT.com" xmlns:tns="http://www.ShopXSLT.com"
+	elementFormDefault="unqualified">
+
+	<!-- Main element -->
+	<xs:element name="shop" type="tns:shop" />
+
+	<!-- Description shop element -->
+	<xs:complexType name="shop">
+		<xs:sequence>
+			<xs:element name="category" type="tns:category" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Description category element -->
+	<xs:complexType name="category">
+		<xs:sequence>
+			<xs:element name="subcategory" type="tns:subcategory"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<!-- Description subcategory element -->
+	<xs:complexType name="subcategory">
+		<xs:sequence>
+			<xs:element name="product" type="tns:product" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<!-- Description product element -->
+	<xs:complexType name="product">
+		<xs:sequence>
+			<xs:element name="producer" type="xs:string" />
+			<xs:element name="model" type="xs:string" />
+			<xs:element name="dateOfIssue" type="xs:date" />
+			<xs:element name="color" type="xs:string" />
+			<xs:choice>
+				<xs:element name="price">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:minExclusive value="0" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="notInStock">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="true" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required" />
+	</xs:complexType>
+</xs:schema>
